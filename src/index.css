@@ -7,8 +7,26 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-[#F5F5F0] text-[#1A1A1A] font-sans antialiased;
+    @apply bg-[#F4F0E8] text-[#1A1A1A] font-sans antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 32%),
+      radial-gradient(circle at 85% 0%, rgba(209, 196, 179, 0.22), transparent 24%),
+      linear-gradient(180deg, #f7f3ec 0%, #f0eadf 100%);
+  }
+
+  ::selection {
+    background: rgba(17, 24, 39, 0.12);
+  }
+}
+
+@layer utilities {
+  .accent-fade {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
   }
 }
 
